@@ -1,31 +1,183 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <title>
-            Adam Bouyadjera | Software Engineer Portfolio
-        </title>
-    </head>
-    <body>
-        <h1>Adam Bouyadjera</h1>
-        <p>Software Engineering Student</p>
-        <h2>About me</h2>
-        <p>
-    I'm a Software Engineering student at the University of Texas at Arlington
-    with an interest in building mobile and web apps, machine learning, and autonomy. 
-    I've gained experience working in fast-paced technical environments through my work
-    with Tesla's Autopilot team, where I supported real-world data collection
-    for FSD development.
-        </p>
-        <h2>Projects</h2>
-        <p>
-            <a href="https://github.com/myriambouayad/investIQ-Hackathon">InvestIQ</a>
-            <a href = "https://github.com/DarshanBabuShrestha/autoreel">LenseIQ</a>
-        </p>
-        <h2>Goals</h2>
-        <p> 
-            Whatever I build and contribute to, my goal is for it to positvely impact
-            the world we live in. I want to be a part of something meaningful. I want to learn
-            how we can use AI to serve our community and help the people who can't help themselves.
-        </p>
-    </body>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adam Bouyadjera | Software Engineer Portfolio</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --bg-color: #0f172a;
+            --card-bg: #1e293b;
+            --text-main: #f8fafc;
+            --text-muted: #94a3b8;
+            --accent: #38bdf8;
+            --accent-glow: rgba(56, 189, 248, 0.15);
+            --border-color: #334155;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            line-height: 1.6;
+            padding: 2rem 1rem;
+            display: flex;
+            justify-content: center;
+        }
+
+        .container {
+            max-width: 760px;
+            width: 100%;
+        }
+
+        /* Hero / Header Section */
+        header {
+            margin-bottom: 3rem;
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: 2rem;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            letter-spacing: -0.025em;
+            color: var(--text-main);
+        }
+
+        .subtitle {
+            font-size: 1.25rem;
+            color: var(--accent);
+            font-weight: 500;
+            margin-top: 0.25rem;
+        }
+
+        /* Content Sections */
+        section {
+            margin-bottom: 3rem;
+        }
+
+        h2 {
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+            color: var(--text-main);
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        h2::before {
+            content: "";
+            display: inline-block;
+            width: 4px;
+            height: 1.2rem;
+            background-color: var(--accent);
+            border-radius: 2px;
+        }
+
+        p {
+            color: var(--text-muted);
+            font-size: 1.05rem;
+        }
+
+        /* Projects Section */
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.25rem;
+        }
+
+        .project-card {
+            background-color: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            padding: 1.5rem;
+            transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .project-card:hover {
+            transform: translateY(-3px);
+            border-color: var(--accent);
+            box-shadow: 0 10px 25px var(--accent-glow);
+        }
+
+        .project-title {
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: var(--text-main);
+            margin-bottom: 0.5rem;
+        }
+
+        .project-link {
+            display: inline-block;
+            margin-top: 1rem;
+            color: var(--accent);
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 0.95rem;
+        }
+
+        .project-link:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <header>
+            <h1>Adam Bouyadjera</h1>
+            <p class="subtitle">Software Engineering Student</p>
+        </header>
+
+        <section id="about">
+            <h2>About me</h2>
+            <p>
+                I'm a Software Engineering student at the University of Texas at Arlington with an interest in building mobile and web apps, machine learning, and autonomy. I've gained experience working in fast-paced technical environments through my work with Tesla's Autopilot team, where I supported real-world data collection for FSD development.
+            </p>
+        </section>
+
+        <section id="projects">
+            <h2>Projects</h2>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <div>
+                        <div class="project-title">InvestIQ</div>
+                        <p>Hackathon financial tool designed to provide key investment insights.</p>
+                    </div>
+                    <a href="https://github.com/myriambouayad/investIQ-Hackathon" target="_blank" class="project-link">View on GitHub &rarr;</a>
+                </div>
+                <div class="project-card">
+                    <div>
+                        <div class="project-title">AutoReel</div>
+                        <p>Automated video reel generation project powered by Python and web tools.</p>
+                    </div>
+                    <a href="https://github.com/DarshanBabuShrestha/autoreel" target="_blank" class="project-link">View on GitHub &rarr;</a>
+                </div>
+            </div>
+        </section>
+
+        <section id="goals">
+            <h2>Goals</h2>
+            <p>
+                Whatever I build and contribute to, my goal is for it to positively impact the world we live in. I want to be a part of something meaningful. I want to learn how we can use AI to serve our community and help the people who can't help themselves.
+            </p>
+        </section>
+    </div>
+
+</body>
 </html>
